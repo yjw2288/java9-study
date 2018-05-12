@@ -1,1 +1,1 @@
-javac -encoding UTF-8 --module-source-path src -d out --module packt.addressbook
+javac -encoding UTF-8 --module-source-path src -d out --module packt.addressbook,packt.sortutil
