@@ -1,6 +1,6 @@
 package packt.addressbook.model;
 
-public class Contact implements Comparable {
+public class Contact implements Comparable<Contact> {
 	private String firstName;
 	private String lastName;
 	private String phoneNumber;
@@ -15,9 +15,7 @@ public class Contact implements Comparable {
 		return this.lastName + " " + this.phoneNumber;
 	}
 
-	public int compareTo(Object other) {
-		Contact otherContact = (Contact) other;
-
+	public int compareTo(Contact otherContact) {
 		return this.lastName.compareTo(otherContact.lastName);
 	}
 }

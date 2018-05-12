@@ -3,12 +3,16 @@ package packt.addressbook.util;
 import java.util.*;
 
 public class SortUtil {
-	public <T extends Comparable> List<T> sortList(List<T> list) {
+	public <T extends Comparable<T>> List<T> sortList(List<T> from) {
+		List<T> list = new ArrayList<>(from);
 		for(int outer = 0;outer < list.size() - 1;outer++) {
 			for(int inner = 0;inner < list.size() - outer - 1;inner++ ) {
-				swap(list, inner);
+				if(list.get(inner).compareTo(list.get(inner + 1)) > 0) {
+					swap(list, inner);
+				}
 			}
 		}
+
 		return list;
 	}
 
