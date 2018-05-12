@@ -1,4 +1,4 @@
-package packt.addressbook.util;
+package packt.sortutil;
 
 import java.util.*;
 
